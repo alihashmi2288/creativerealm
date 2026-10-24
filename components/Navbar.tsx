@@ -33,16 +33,16 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="fixed top-9 sm:top-9 inset-x-0 w-full z-[100] px-4 sm:px-8 pointer-events-none transition-all">
+    <header className="fixed top-9 sm:top-9 inset-x-0 w-full z-[100] px-4 sm:px-8 pointer-events-none">
       <nav 
         aria-label="Main Navigation" 
-        className="pointer-events-auto max-w-6xl mx-auto px-5 sm:px-7 h-16 sm:h-18 flex justify-between items-center rounded-full bg-white/95 backdrop-blur-xl border border-[#e5e7eb] shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-all duration-300"
+        className="pointer-events-auto max-w-6xl mx-auto px-5 sm:px-7 h-16 sm:h-18 flex justify-between items-center rounded-full bg-white/95 backdrop-blur-xl border border-[#e5e7eb] shadow-[0_2px_12px_rgba(0,0,0,0.06)] transition-[background-color,border-color,box-shadow] duration-250 ease-[var(--ease-out)]"
       >
         {/* Left Zone: Brand Logo */}
         <Link 
           href="/" 
           prefetch={false}
-          className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#17171c] rounded-full px-1 py-1 transition-opacity hover:opacity-85"
+          className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#17171c] rounded-full px-1 py-1 transition-opacity duration-150 hover:opacity-85"
           aria-label="Creative Realm Homepage"
         >
           <BrandLogo variant="default" size="md" />
@@ -59,7 +59,7 @@ export default function Navbar() {
                 prefetch={false}
                 role="menuitem"
                 aria-current={isActive ? "page" : undefined}
-                className={`relative px-4 py-2 rounded-full font-sans text-xs uppercase tracking-wider transition-all duration-200 flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#17171c] ${
+                className={`relative px-4 py-2 rounded-full font-sans text-xs uppercase tracking-wider transition-[background-color,color] duration-150 ease-[var(--ease-out)] flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#17171c] ${
                   isActive 
                     ? "bg-[#eeece7] text-[#17171c] font-semibold" 
                     : "text-[#616161] hover:text-[#17171c] hover:bg-[#f5f5f5]"
@@ -88,7 +88,7 @@ export default function Navbar() {
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <button 
-                className="md:hidden text-[#17171c] p-2.5 size-10 rounded-full bg-[#f4f4f4] border border-[#e5e7eb] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#17171c] active:scale-95 cursor-pointer"
+                className="md:hidden text-[#17171c] p-2.5 size-10 rounded-full bg-[#f4f4f4] border border-[#e5e7eb] flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#17171c] transition-[background-color,transform] duration-150 ease-[var(--ease-out)] active:scale-95 cursor-pointer"
                 aria-label="Open navigation menu"
               >
                 <Menu size={20} aria-hidden="true" />

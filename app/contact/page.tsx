@@ -53,19 +53,19 @@ export default function ContactPage() {
             </div>
 
             <div className="space-y-4 pt-4 border-t border-[#e5e7eb]" role="region" aria-label="Direct Contact Channels">
-              <div className="flex gap-4 items-start p-5 rounded-[16px] bg-[#eeece7] border border-[#e5e7eb] hover:border-[#d9d9dd] transition-all">
+              <div className="flex gap-4 items-start p-5 rounded-[16px] bg-[#eeece7] border border-[#e5e7eb] hover:border-[#d9d9dd] transition-[border-color,box-shadow] duration-200 ease-[var(--ease-out)]">
                 <div className="w-10 h-10 rounded-[8px] bg-white border border-[#e5e7eb] flex items-center justify-center text-[#17171c] flex-shrink-0" aria-hidden="true">
                   <Mail size={18} />
                 </div>
                 <div>
                   <h3 className="text-[#17171c] font-bold font-display uppercase text-xs tracking-wider mb-1">Direct Email</h3>
-                  <a href="mailto:creativerealmdesignstudio@gmail.com" className="text-[#616161] hover:text-[#17171c] font-sans text-sm transition-colors">
+                  <a href="mailto:creativerealmdesignstudio@gmail.com" className="text-[#616161] hover:text-[#17171c] font-sans text-sm transition-colors duration-150 ease-[var(--ease-out)]">
                     creativerealmdesignstudio@gmail.com
                   </a>
                 </div>
               </div>
 
-              <div className="flex gap-4 items-start p-5 rounded-[16px] bg-[#eeece7] border border-[#e5e7eb] hover:border-[#d9d9dd] transition-all">
+              <div className="flex gap-4 items-start p-5 rounded-[16px] bg-[#eeece7] border border-[#e5e7eb] hover:border-[#d9d9dd] transition-[border-color,box-shadow] duration-200 ease-[var(--ease-out)]">
                 <div className="w-10 h-10 rounded-[8px] bg-white border border-[#e5e7eb] flex items-center justify-center text-[#ff7759] flex-shrink-0" aria-hidden="true">
                   <MapPin size={18} />
                 </div>
@@ -75,13 +75,13 @@ export default function ContactPage() {
                 </div>
               </div>
 
-              <div className="flex gap-4 items-start p-5 rounded-[16px] bg-[#eeece7] border border-[#e5e7eb] hover:border-[#d9d9dd] transition-all">
+              <div className="flex gap-4 items-start p-5 rounded-[16px] bg-[#eeece7] border border-[#e5e7eb] hover:border-[#d9d9dd] transition-[border-color,box-shadow] duration-200 ease-[var(--ease-out)]">
                 <div className="w-10 h-10 rounded-[8px] bg-white border border-[#e5e7eb] flex items-center justify-center text-[#003c33] flex-shrink-0" aria-hidden="true">
                   <Phone size={18} />
                 </div>
                 <div>
                   <h3 className="text-[#17171c] font-bold font-display uppercase text-xs tracking-wider mb-1">Direct Phone</h3>
-                  <a href="tel:+442079460123" className="text-[#616161] hover:text-[#17171c] font-sans text-sm transition-colors">
+                  <a href="tel:+442079460123" className="text-[#616161] hover:text-[#17171c] font-sans text-sm transition-colors duration-150 ease-[var(--ease-out)]">
                     +44 (0)20 7946 0123
                   </a>
                 </div>
@@ -101,8 +101,8 @@ export default function ContactPage() {
 
           <div className="lg:col-span-7">
             {submitted ? (
-              <div className="contact-form-card p-12 text-center rounded-[22px] border border-[#c3eec0] bg-[#edfce9]/30" role="status" aria-live="polite">
-                <CheckCircle className="w-14 h-14 text-[#003c33] mx-auto mb-5" aria-hidden="true" />
+              <div className="contact-form-card p-12 text-center rounded-[22px] border border-[#c3eec0] bg-[#edfce9]/30 animate-in fade-in-0 zoom-in-95 duration-250 ease-[var(--ease-out)]" role="status" aria-live="polite">
+                <CheckCircle className="w-14 h-14 text-[#003c33] mx-auto mb-5 animate-in zoom-in-90 duration-300 ease-[var(--ease-out)]" aria-hidden="true" />
                 <h2 className="text-3xl font-bold font-display text-[#17171c] uppercase mb-3">
                   Inquiry Received!
                 </h2>

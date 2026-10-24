@@ -63,13 +63,13 @@ export default function BlurText({
 
   const fromSnapshot =
     direction === "top"
-      ? { filter: "blur(10px)", opacity: 0, y: -24 }
-      : { filter: "blur(10px)", opacity: 0, y: 24 };
+      ? { filter: "blur(8px)", opacity: 0, transform: "translateY(-16px)" }
+      : { filter: "blur(8px)", opacity: 0, transform: "translateY(16px)" };
 
   const toSnapshot = {
     filter: "blur(0px)",
     opacity: 1,
-    y: 0,
+    transform: "translateY(0px)",
   };
 
   const shouldAnimate = mounted && !prefersReducedMotion;
@@ -84,7 +84,7 @@ export default function BlurText({
           transition={{
             duration: stepDuration,
             delay: (index * delay) / 1000,
-            ease: [0.25, 1, 0.5, 1],
+            ease: [0.23, 1, 0.32, 1],
           }}
           className="inline-block will-change-[filter,opacity,transform]"
         >

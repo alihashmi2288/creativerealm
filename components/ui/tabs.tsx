@@ -63,7 +63,7 @@ function TabsTrigger({
     <TabsPrimitive.Trigger
       data-slot="tabs-trigger"
       className={cn(
-        "relative inline-flex min-h-[38px] items-center justify-center gap-2 rounded-full px-5 py-2 text-xs font-bold font-display uppercase tracking-wider whitespace-nowrap text-gray-400 transition-all duration-200 cursor-pointer select-none",
+        "relative inline-flex min-h-[38px] items-center justify-center gap-2 rounded-full px-5 py-2 text-xs font-bold font-display uppercase tracking-wider whitespace-nowrap text-gray-400 transition-[background-color,color,box-shadow,transform] duration-200 ease-[var(--ease-out)] active:scale-[0.97] cursor-pointer select-none",
         "hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-primary focus-visible:ring-offset-2 focus-visible:ring-offset-black disabled:pointer-events-none disabled:opacity-50",
         "data-[state=active]:bg-gradient-to-r data-[state=active]:from-[#7c3aed] data-[state=active]:to-[#a855f7] data-[state=active]:text-white data-[state=active]:shadow-[0_8px_18px_-2px_rgba(124,58,237,0.55),inset_2px_2px_4px_rgba(255,255,255,0.4),inset_-2.5px_-2.5px_5px_rgba(40,5,80,0.7)] data-[state=active]:scale-[1.02]",
         className
@@ -80,7 +80,7 @@ function TabsContent({
   return (
     <TabsPrimitive.Content
       data-slot="tabs-content"
-      className={cn("flex-1 outline-none", className)}
+      className={cn("flex-1 outline-none animate-in fade-in-0 duration-200 ease-[var(--ease-out)]", className)}
       {...props}
     />
   )

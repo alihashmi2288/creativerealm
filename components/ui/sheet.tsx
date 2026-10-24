@@ -59,11 +59,11 @@ function SheetContent({
       <SheetPrimitive.Content
         data-slot="sheet-content"
         className={cn(
-          "fixed z-50 flex flex-col gap-4 bg-[#13131c] text-white shadow-2xl transition ease-in-out data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:animate-in data-[state=open]:duration-500",
+          "fixed z-50 flex flex-col gap-4 bg-[#13131c] text-white shadow-2xl transition ease-[var(--ease-drawer)] duration-300 data-[state=closed]:animate-out data-[state=closed]:duration-250 data-[state=open]:animate-in data-[state=open]:duration-350",
           side === "right" &&
-            "inset-y-0 right-0 h-full w-3/4 border-l border-white/15 shadow-[0_24px_50px_rgba(0,0,0,0.85),inset_2px_0_4px_rgba(255,255,255,0.12)] sm:max-w-md",
+            "inset-y-0 right-0 h-full w-3/4 border-l border-white/15 shadow-[0_24px_50px_rgba(0,0,0,0.85),inset_2px_0_4px_rgba(255,255,255,0.12)] sm:max-w-md data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right",
           side === "left" &&
-            "inset-y-0 left-0 h-full w-3/4 border-r border-white/15 shadow-[0_24px_50px_rgba(0,0,0,0.85),inset_-2px_0_4px_rgba(255,255,255,0.12)] sm:max-w-md",
+            "inset-y-0 left-0 h-full w-3/4 border-r border-white/15 shadow-[0_24px_50px_rgba(0,0,0,0.85),inset_-2px_0_4px_rgba(255,255,255,0.12)] sm:max-w-md data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left",
           side === "top" &&
             "inset-x-0 top-0 h-auto border-b border-white/15 data-[state=closed]:slide-out-to-top data-[state=open]:slide-in-from-top",
           side === "bottom" &&
@@ -74,7 +74,7 @@ function SheetContent({
       >
         {children}
         {showCloseButton && (
-          <SheetPrimitive.Close className="absolute top-5 right-5 size-9 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/20 shadow-[0_4px_8px_rgba(0,0,0,0.4),inset_1px_1px_2px_rgba(255,255,255,0.2)] transition-all cursor-pointer active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-primary">
+          <SheetPrimitive.Close className="absolute top-5 right-5 size-9 rounded-full bg-white/10 border border-white/15 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/20 shadow-[0_4px_8px_rgba(0,0,0,0.4),inset_1px_1px_2px_rgba(255,255,255,0.2)] transition-[background-color,color,border-color,transform] duration-150 ease-[var(--ease-out)] cursor-pointer active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-primary">
             <XIcon className="size-4" />
             <span className="sr-only">Close</span>
           </SheetPrimitive.Close>

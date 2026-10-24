@@ -43,7 +43,7 @@ export default function SpotlightCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "relative overflow-hidden rounded-[16px] bg-white border border-[#e5e7eb] p-7 transition-all duration-200 group hover:border-[#d9d9dd] hover:shadow-sm",
+        "relative overflow-hidden rounded-[16px] bg-white border border-[#e5e7eb] p-7 transition-[border-color,box-shadow] duration-200 ease-[var(--ease-out)] group hover:border-[#d9d9dd] hover:shadow-sm",
         className
       )}
       style={{
@@ -55,7 +55,7 @@ export default function SpotlightCard({
       {/* Dynamic Cursor Spotlight Radial Overlay */}
       <div
         className={cn(
-          "pointer-events-none absolute -inset-px transition-opacity duration-300",
+          "pointer-events-none absolute -inset-px transition-opacity duration-250 ease-[var(--ease-out)]",
           isHovered ? "opacity-100" : "opacity-0"
         )}
         style={{

@@ -80,8 +80,8 @@ export default function ProposalDialog({
         </DialogHeader>
 
         {submitted ? (
-          <div className="py-8 text-center flex flex-col items-center justify-center space-y-4" role="status" aria-live="polite">
-            <div className="size-14 rounded-full bg-[#edfce9] border border-[#c3eec0] flex items-center justify-center text-[#003c33]">
+          <div className="py-8 text-center flex flex-col items-center justify-center space-y-4 animate-in fade-in-0 zoom-in-95 duration-250 ease-[var(--ease-out)]" role="status" aria-live="polite">
+            <div className="size-14 rounded-full bg-[#edfce9] border border-[#c3eec0] flex items-center justify-center text-[#003c33] animate-in zoom-in-90 duration-300 ease-[var(--ease-out)]">
               <CheckCircle2 className="w-7 h-7" aria-hidden="true" />
             </div>
             <h3 className="text-xl font-bold font-display uppercase tracking-tight text-[#17171c]">Proposal Request Received</h3>

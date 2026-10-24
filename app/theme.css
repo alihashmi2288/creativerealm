@@ -39,6 +39,9 @@
 @layer base {
   :root {
     color-scheme: light;
+    --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+    --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+    --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
   }
 
   html {
@@ -85,24 +88,25 @@
     font-weight: 500;
     line-height: 1.71;
     letter-spacing: 0;
-    transition: background-color 0.2s ease, transform 0.15s ease, opacity 0.15s ease;
+    transition: background-color 0.2s var(--ease-out), transform 0.16s var(--ease-out), opacity 0.16s var(--ease-out);
     cursor: pointer;
     user-select: none;
     border: 1px solid transparent;
     text-decoration: none;
   }
 
-  .btn-primary:hover,
-  .cohere-btn-primary:hover {
-    background-color: #000000;
-    transform: translateY(-1px);
-    color: #ffffff;
+  @media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover,
+    .cohere-btn-primary:hover {
+      background-color: #000000;
+      transform: translateY(-1px);
+      color: #ffffff;
+    }
   }
 
   .btn-primary:active,
   .cohere-btn-primary:active {
-    transform: translateY(0);
-    opacity: 0.92;
+    transform: scale(0.97);
   }
 
   /* Cohere Secondary Button: Text-only link with rule or underline alignment */
@@ -125,7 +129,12 @@
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-color: #d9d9dd;
-    transition: text-decoration-color 0.2s ease, color 0.2s ease;
+    transition: text-decoration-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.16s var(--ease-out);
+  }
+
+  .btn-secondary:active,
+  .cohere-btn-secondary:active {
+    transform: scale(0.97);
   }
 
   .btn-secondary:hover,
@@ -150,14 +159,21 @@
     font-weight: 500;
     line-height: 1.4;
     cursor: pointer;
-    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    transition: border-color 0.2s var(--ease-out), background-color 0.2s var(--ease-out), color 0.2s var(--ease-out), transform 0.16s var(--ease-out);
     text-decoration: none;
   }
 
-  .btn-pill-outline:hover,
-  .cohere-btn-pill-outline:hover {
-    border-color: #17171c;
-    background-color: #f8f8f8;
+  @media (hover: hover) and (pointer: fine) {
+    .btn-pill-outline:hover,
+    .cohere-btn-pill-outline:hover {
+      border-color: #17171c;
+      background-color: #f8f8f8;
+    }
+  }
+
+  .btn-pill-outline:active,
+  .cohere-btn-pill-outline:active {
+    transform: scale(0.97);
   }
 
   /* White Pill Button on Dark Sections */
@@ -172,16 +188,22 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 1.71;
-    transition: background-color 0.2s ease, transform 0.15s ease;
+    transition: background-color 0.2s var(--ease-out), transform 0.16s var(--ease-out);
     cursor: pointer;
     border: 1px solid transparent;
     text-decoration: none;
   }
 
-  .btn-white-pill:hover {
-    background-color: #f2f2f2;
-    transform: translateY(-1px);
-    color: #000000;
+  @media (hover: hover) and (pointer: fine) {
+    .btn-white-pill:hover {
+      background-color: #f2f2f2;
+      transform: translateY(-1px);
+      color: #000000;
+    }
+  }
+
+  .btn-white-pill:active {
+    transform: scale(0.97);
   }
 
   /* Cohere Announcement Bar: 36px tall, full width, black background */
@@ -206,7 +228,7 @@
     border: 1px solid #e5e7eb;
     border-radius: 16px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
   }
 
   .clay-card:hover,
@@ -278,8 +300,12 @@
     padding: 8px 16px;
     font-size: 13px;
     font-weight: 500;
-    transition: all 0.2s ease;
+    transition: background-color 0.2s var(--ease-out), color 0.2s var(--ease-out), border-color 0.2s var(--ease-out), transform 0.16s var(--ease-out);
     cursor: pointer;
+  }
+
+  .blog-filter-chip:active {
+    transform: scale(0.97);
   }
 
   .blog-filter-chip.active,
@@ -361,7 +387,7 @@
     font-size: 15px;
     color: #212121;
     outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out);
   }
 
   .form-input:focus {
@@ -477,11 +503,124 @@
   }
 }
 
+/* Animations & Keyframes */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap, 1.25rem)));
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(calc(-100% - var(--gap, 1.25rem)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - var(--gap, 1.25rem)));
+  }
+}
+
+@keyframes marquee-vertical-reverse {
+  from {
+    transform: translateY(calc(-100% - var(--gap, 1.25rem)));
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 35s) linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse var(--marquee-duration, 35s) linear infinite;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--marquee-duration, 35s) linear infinite;
+}
+
+.animate-marquee-vertical-reverse {
+  animation: marquee-vertical-reverse var(--marquee-duration, 35s) linear infinite;
+}
+
+.marquee-pause:hover .animate-marquee,
+.marquee-pause:hover .animate-marquee-reverse,
+.marquee-pause:hover .animate-marquee-vertical,
+.marquee-pause:hover .animate-marquee-vertical-reverse {
+  animation-play-state: paused;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-shine {
+  animation: shine 4s linear infinite;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 220ms var(--ease-out) forwards;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 200ms var(--ease-out) forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .btn-pill-outline,
+  .btn-white-pill,
+  .cohere-card,
+  .clay-card {
+    transform: none !important;
+    transition-property: opacity, background-color, border-color, color !important;
+    transition-duration: 0.15s !important;
   }
 }

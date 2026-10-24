@@ -38,7 +38,7 @@ export default function PortfolioPage() {
                   aria-selected={activeCategory === cat}
                   aria-controls="portfolio-grid"
                   onClick={() => setActiveCategory(cat)}
-                  className={`min-h-[40px] px-5 py-2 rounded-full flex items-center justify-center transition-all font-medium font-sans text-xs uppercase tracking-wider cursor-pointer border ${
+                  className={`min-h-[40px] px-5 py-2 rounded-full flex items-center justify-center transition-[background-color,color,border-color,transform] duration-160 ease-[var(--ease-out)] active:scale-[0.97] font-medium font-sans text-xs uppercase tracking-wider cursor-pointer border ${
                     activeCategory === cat 
                     ? "bg-[#ff7759] text-white border-[#ff7759]" 
                     : "bg-transparent text-[#616161] border-transparent hover:text-[#17171c] hover:bg-white"
@@ -52,7 +52,7 @@ export default function PortfolioPage() {
         </header>
 
         {filteredProjects.length === 0 ? (
-          <div className="text-center py-20 px-6 rounded-[22px] bg-[#eeece7] border border-[#e5e7eb] max-w-xl mx-auto my-12">
+          <div className="text-center py-20 px-6 rounded-[22px] bg-[#eeece7] border border-[#e5e7eb] max-w-xl mx-auto my-12 animate-in fade-in-0 zoom-in-95 duration-250 ease-[var(--ease-out)]">
             <h2 className="text-2xl font-bold font-display text-[#17171c] uppercase tracking-tight mb-3">
               No Projects in &ldquo;{activeCategory}&rdquo;
             </h2>
@@ -71,7 +71,7 @@ export default function PortfolioPage() {
             {filteredProjects.map((project: Project) => (
               <div
                 key={project.id}
-                className="group transition-opacity duration-300"
+                className="group transition-opacity duration-250 ease-[var(--ease-out)] animate-in fade-in-0"
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                   <div className="lg:col-span-7 overflow-hidden rounded-[22px] relative aspect-[16/10] bg-[#eeece7] border border-[#d9d9dd] p-3 shadow-sm">
@@ -81,15 +81,15 @@ export default function PortfolioPage() {
                         alt={`Mockup and visual showcase for ${project.title} - ${project.category}`}
                         fill
                         sizes="(max-width: 1024px) 100vw, 60vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                        className="object-cover group-hover:scale-105 transition-transform duration-300 ease-[var(--ease-out)]" 
                         loading="lazy"
                       />
                       <Link 
                         href={`/portfolio/${project.slug}`}
                         aria-label={`Explore ${project.title} project`}
-                        className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-xs rounded-[16px]"
+                        className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-250 ease-[var(--ease-out)] flex items-center justify-center backdrop-blur-xs rounded-[16px]"
                       >
-                        <div className="w-16 h-16 rounded-full bg-white text-[#17171c] flex items-center justify-center scale-90 group-hover:scale-100 transition-transform duration-300 shadow-lg" aria-hidden="true">
+                        <div className="w-16 h-16 rounded-full bg-white text-[#17171c] flex items-center justify-center scale-90 group-hover:scale-100 transition-transform duration-250 ease-[var(--ease-out)] shadow-lg" aria-hidden="true">
                           <ArrowUpRight size={32} />
                         </div>
                       </Link>

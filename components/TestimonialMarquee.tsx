@@ -83,7 +83,7 @@ const testimonialsRow2: Testimonial[] = [
 
 function TestimonialCard({ item }: { item: Testimonial }) {
   return (
-    <div className="relative w-[340px] sm:w-[420px] shrink-0 rounded-[16px] bg-[#eeece7] border border-[#e5e7eb] p-7 flex flex-col justify-between transition-all duration-200 hover:border-[#d9d9dd] group">
+    <div className="relative w-[340px] sm:w-[420px] shrink-0 rounded-[16px] bg-[#eeece7] border border-[#e5e7eb] p-7 flex flex-col justify-between transition-[border-color,box-shadow] duration-200 ease-[var(--ease-out)] hover:border-[#d9d9dd] group">
       <div>
         <div className="flex items-center justify-between gap-2 mb-4">
           <span className="text-xs font-mono font-medium uppercase tracking-wider text-[#17171c]">

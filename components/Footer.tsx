@@ -37,7 +37,7 @@ export default function Footer() {
                   aria-label={label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="size-9 rounded-full bg-[#22222a] border border-[#33333d] flex items-center justify-center text-white text-xs font-medium hover:border-[#ff7759] hover:text-[#ff7759] transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7759]"
+                  className="size-9 rounded-full bg-[#22222a] border border-[#33333d] flex items-center justify-center text-white text-xs font-medium hover:border-[#ff7759] hover:text-[#ff7759] transition-[border-color,color,background-color,transform] duration-150 ease-[var(--ease-out)] active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7759]"
                 >
                   <span aria-hidden="true">{icon}</span>
                 </a>
