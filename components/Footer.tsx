@@ -54,6 +54,7 @@ export default function Footer() {
               <li><Link href="/packages" prefetch={false} className="hover:text-white transition-colors focus-visible:outline-none focus-visible:underline">Packages & Pricing</Link></li>
               <li><Link href="/portfolio" prefetch={false} className="hover:text-white transition-colors focus-visible:outline-none focus-visible:underline">Case Studies</Link></li>
               <li><Link href="/contact" prefetch={false} className="hover:text-white transition-colors focus-visible:outline-none focus-visible:underline">Get in Touch</Link></li>
+              <li><a href="/brand/brand-book.html" target="_blank" rel="noopener noreferrer" className="hover:text-[#ff7759] transition-colors focus-visible:outline-none focus-visible:underline flex items-center gap-1">Brand Kit &amp; Specs <span className="text-[10px] text-[#ff7759]">↗</span></a></li>
             </ul>
           </div>
 

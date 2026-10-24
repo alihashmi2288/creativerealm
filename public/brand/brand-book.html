@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creative Realm — Official Brand Book & Brand Kit</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #121216;
+      --bg-panel: #17171c;
+      --bg-card: #1f1f26;
+      --border-dark: #2c2c36;
+      --border-light: #e5e7eb;
+      --coral: #ff7759;
+      --coral-soft: #ffad9b;
+      --charcoal: #17171c;
+      --text-white: #ffffff;
+      --text-muted: #93939f;
+      --canvas: #ffffff;
+      --soft-stone: #eeece7;
+      --deep-green: #003c33;
+      --dark-navy: #071829;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Layout */
+    .app-container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Sidebar Navigation */
+    aside.sidebar {
+      width: 280px;
+      background-color: var(--bg-panel);
+      border-right: 1px solid var(--border-dark);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 32px 24px;
+      flex-shrink: 0;
+    }
+
+    .brand-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--coral);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .sidebar h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 32px;
+    }
+    .sidebar h2 span { color: var(--coral); }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--text-white);
+      background-color: var(--bg-card);
+    }
+    .nav-links a.active {
+      border-left: 2px solid var(--coral);
+    }
+
+    /* Main Content */
+    main.content {
+      flex: 1;
+      padding: 56px 64px 120px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header.doc-header {
+      margin-bottom: 64px;
+      border-bottom: 1px solid var(--border-dark);
+      padding-bottom: 40px;
+    }
+
+    header.doc-header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    header.doc-header p {
+      color: var(--text-muted);
+      font-size: 18px;
+      max-width: 720px;
+    }
+
+    .meta-pills {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .pill {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-dark);
+      padding: 6px 14px;
+      border-radius: 100px;
+      color: var(--text-muted);
+    }
+
+    /* Section Styles */
+    section.book-section {
+      margin-bottom: 88px;
+      scroll-margin-top: 40px;
+    }
+
+    section.book-section h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 28px;
+      letter-spacing: -0.8px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    section.book-section h2 .sec-num {
+      color: var(--coral);
+      font-family: 'Space Mono', monospace;
+      font-size: 14px;
+    }
+
+    section.book-section p.lead {
+      color: var(--text-muted);
+      font-size: 16px;
+      margin-bottom: 32px;
+      max-width: 800px;
+    }
+
+    /* Display Cards */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-dark);
+      border-radius: 16px;
+      padding: 32px;
+      position: relative;
+    }
+
+    .card.light-card {
+      background: var(--canvas);
+      color: var(--charcoal);
+      border: 1px solid var(--border-light);
+    }
+
+    .logo-stage {
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .logo-stage.light {
+      background: #ffffff;
+      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+    }
+
+    .logo-stage.dark {
+      background: #17171c;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+    }
+
+    .logo-stage.coral {
+      background: #ff7759;
+    }
+
+    .card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .card.light-card p {
+      color: #616161;
+    }
+
+    /* Swatches */
+    .swatch-card {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-dark);
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .swatch-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--coral);
+    }
+
+    .swatch-color {
+      height: 120px;
+      width: 100%;
+      position: relative;
+    }
+
+    .swatch-info {
+      padding: 20px;
+    }
+
+    .swatch-info h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .swatch-info .role {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .code-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: #c7c7d4;
+    }
+
+    .code-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Typography Specimens */
+    .type-specimen {
+      background: var(--bg-panel);
+      border: 1px solid var(--border-dark);
+      border-radius: 14px;
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+
+    .type-specimen .font-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--coral);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .specimen-text-large {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -1.2px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .specimen-text-mono {
+      font-family: 'Space Mono', monospace;
+      font-size: 16px;
+      color: #93939f;
+      line-height: 1.5;
+    }
+
+    /* Rules Table */
+    table.brand-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 14px;
+    }
+
+    table.brand-table th {
+      text-align: left;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-dark);
+      color: var(--text-muted);
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    table.brand-table td {
+      padding: 16px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .badge-do {
+      background: rgba(34, 197, 94, 0.15);
+      color: #4ade80;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .badge-dont {
+      background: rgba(239, 68, 68, 0.15);
+      color: #f87171;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    /* Button CTA */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--coral);
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-dark);
+      color: var(--text-white);
+    }
+    .btn-outline:hover { background: var(--bg-card); }
+
+    /* Toast Notification */
+    #copy-toast {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: var(--charcoal);
+      border: 1px solid var(--coral);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-family: 'Space Mono', monospace;
+      display: none;
+      z-index: 1000;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+
+    @media (max-width: 900px) {
+      .app-container { flex-direction: column; }
+      aside.sidebar { width: 100%; height: auto; position: static; }
+      main.content { padding: 32px 20px; }
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand-tag">System Specs</div>
+      <h2>CREATIVE <span>REALM</span></h2>
+      <ul class="nav-links">
+        <li><a href="#overview" class="active">01. Brand Strategy</a></li>
+        <li><a href="#logo-system">02. Logo Architecture</a></li>
+        <li><a href="#clear-space">03. Clear Space &amp; Scale</a></li>
+        <li><a href="#color-palette">04. Color System</a></li>
+        <li><a href="#typography">05. Typography Scales</a></li>
+        <li><a href="#iconography">06. Web &amp; App Icons</a></li>
+        <li><a href="#applications">07. Mockups &amp; In-Use</a></li>
+        <li><a href="#governance">08. Brand Rules &amp; Misuse</a></li>
+      </ul>
+      <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-dark);">
+        <a href="/" class="btn btn-outline" style="width: 100%; justify-content: center;">← Back to Website</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <header class="doc-header" id="overview">
+        <div class="brand-tag">Production Standards Manual</div>
+        <h1>Brand Identity &amp; Kit</h1>
+        <p>A definitive guide to the visual language, architectural logo system, and digital design tokens for Creative Realm Designs.</p>
+        <div class="meta-pills">
+          <div class="pill">VERSION 1.0.0</div>
+          <div class="pill">APPROVED MASTER: A1 MONOLITH</div>
+          <div class="pill">PRODUCTION DEPLOYED</div>
+        </div>
+      </header>
+
+      <!-- 1. Brand Strategy -->
+      <section class="book-section">
+        <h2><span class="sec-num">01.</span> Brand Strategy &amp; Essence</h2>
+        <p class="lead">Creative Realm is an authoritative, high-performance digital agency that designs, engineers, and optimizes bespoke websites and organic SEO growth for ambitious brands.</p>
+        
+        <div class="grid-3">
+          <div class="card">
+            <h3>Editorial Authority</h3>
+            <p>Built from stark white editorial space, deep green-black product bands, and razor-sharp typographic hierarchy. Speaks with restrained confidence.</p>
+          </div>
+          <div class="card">
+            <h3>Architectural Precision</h3>
+            <p>Every layout and letterform follows structured mathematical geometry, clean vertical rhythms, and engineered 60-degree diagonals.</p>
+          </div>
+          <div class="card">
+            <h3>High-Performance Velocity</h3>
+            <p>Reflects Next.js engineering rigor, zero-latency interactions, and measurable business growth for market leaders.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Logo System -->
+      <section class="book-section" id="logo-system">
+        <h2><span class="sec-num">02.</span> Logo Architecture</h2>
+        <p class="lead">The mark synthesizes a monolithic geometric "C" frame anchoring an engineered "R" stepping forward at an exact 60.0° angle.</p>
+
+        <div class="grid-2">
+          <!-- Primary Horizontal Lockup -->
+          <div class="card light-card">
+            <div class="logo-stage light">
+              <img src="/brand/creative-realm-logo.svg" alt="Primary Logo" style="height: 52px; width: auto;">
+            </div>
+            <h3>Primary Horizontal Lockup</h3>
+            <p>Standard signature for light surfaces, website headers, proposal decks, and editorial marketing.</p>
+            <div style="margin-top: 16px; display: flex; gap: 10px;">
+              <a href="/brand/creative-realm-logo.svg" download class="btn btn-outline" style="font-size: 11px; padding: 6px 14px; border-color: #d9d9dd; color: #17171c;">Download SVG</a>
+            </div>
+          </div>
+
+          <!-- Inverted Horizontal Lockup -->
+          <div class="card">
+            <div class="logo-stage dark">
+              <img src="/brand/creative-realm-logo-white.svg" alt="Inverted Logo" style="height: 52px; width: auto;">
+            </div>
+            <h3>Inverted Horizontal Lockup</h3>
+            <p>Required on dark backgrounds (#17171c, #071829, #003c33), dark footer bands, and terminal environments.</p>
+            <div style="margin-top: 16px; display: flex; gap: 10px;">
+              <a href="/brand/creative-realm-logo-white.svg" download class="btn btn-outline" style="font-size: 11px; padding: 6px 14px;">Download SVG</a>
+            </div>
+          </div>
+
+          <!-- Standalone Symbol -->
+          <div class="card light-card">
+            <div class="logo-stage light">
+              <img src="/brand/creative-realm-symbol.svg" alt="Creative Realm Symbol" style="height: 80px; width: auto;">
+            </div>
+            <h3>Standalone Master Symbol</h3>
+            <p>The sovereign emblem for social avatars, browser favicons, software badges, and compact spaces.</p>
+            <div style="margin-top: 16px; display: flex; gap: 10px;">
+              <a href="/brand/creative-realm-symbol.svg" download class="btn btn-outline" style="font-size: 11px; padding: 6px 14px; border-color: #d9d9dd; color: #17171c;">Download SVG</a>
+            </div>
+          </div>
+
+          <!-- Stacked Lockup -->
+          <div class="card">
+            <div class="logo-stage dark">
+              <img src="/brand/creative-realm-logo-stacked-white.svg" alt="Stacked Logo" style="height: 110px; width: auto;">
+            </div>
+            <h3>Stacked Vertical Lockup</h3>
+            <p>Engineered for center-aligned hero banners, event lanyards, packaging seals, and square badges.</p>
+            <div style="margin-top: 16px; display: flex; gap: 10px;">
+              <a href="/brand/creative-realm-logo-stacked-white.svg" download class="btn btn-outline" style="font-size: 11px; padding: 6px 14px;">Download SVG</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. Clear Space & Scale -->
+      <section class="book-section" id="clear-space">
+        <h2><span class="sec-num">03.</span> Clear Space &amp; Minimum Scale</h2>
+        <p class="lead">Protecting the visual authority of the mark requires consistent isolation and scale rules across all touchpoints.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Clear Space Rule (1 × X)</h3>
+            <p style="margin-bottom: 20px;">The safety margin around all sides equals <strong>X</strong>, where <strong>X</strong> is the stroke width of the symbol's primary stem (approx. 1/7 of mark height).</p>
+            <div style="background: rgba(255, 119, 89, 0.05); border: 1px dashed var(--coral); border-radius: 12px; padding: 40px; text-align: center;">
+              <div style="border: 1px solid rgba(255,255,255,0.2); display: inline-block; padding: 24px; position: relative;">
+                <img src="/brand/creative-realm-logo-white.svg" alt="Clear Space Diagram" style="height: 38px; width: auto; vertical-align: middle;">
+                <span style="position: absolute; top: 4px; left: 50%; transform: translateX(-50%); font-family: 'Space Mono'; font-size: 10px; color: var(--coral);">1 × X</span>
+                <span style="position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); font-family: 'Space Mono'; font-size: 10px; color: var(--coral);">1 × X</span>
+                <span style="position: absolute; left: 4px; top: 50%; transform: translateY(-50%); font-family: 'Space Mono'; font-size: 10px; color: var(--coral);">X</span>
+                <span style="position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-family: 'Space Mono'; font-size: 10px; color: var(--coral);">X</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Minimum Sizing Ladder</h3>
+            <table class="brand-table">
+              <thead>
+                <tr>
+                  <th>Variant</th>
+                  <th>Digital Screens</th>
+                  <th>Print Media</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Horizontal Lockup</td>
+                  <td>120 px width (min. 28 px height)</td>
+                  <td>32 mm width</td>
+                </tr>
+                <tr>
+                  <td>Stacked Lockup</td>
+                  <td>96 px width</td>
+                  <td>26 mm width</td>
+                </tr>
+                <tr>
+                  <td>Standalone Symbol</td>
+                  <td>16 px × 16 px (Favicon)</td>
+                  <td>6 mm × 6 mm</td>
+                </tr>
+                <tr>
+                  <td>App Icon Tile</td>
+                  <td>48 px × 48 px</td>
+                  <td>12 mm × 12 mm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Color Palette -->
+      <section class="book-section" id="color-palette">
+        <h2><span class="sec-num">04.</span> Color System &amp; Formulations</h2>
+        <p class="lead">Click any swatch to copy its exact HEX color code to your clipboard.</p>
+
+        <div class="grid-4">
+          <!-- Charcoal -->
+          <div class="swatch-card" onclick="copyColor('#17171c')">
+            <div class="swatch-color" style="background: #17171c; border-bottom: 1px solid #2a2a35;"></div>
+            <div class="swatch-info">
+              <h4>Primary Charcoal</h4>
+              <div class="role">Anchor Brand Color</div>
+              <div class="code-list">
+                <div class="code-row"><span>HEX</span><strong>#17171C</strong></div>
+                <div class="code-row"><span>RGB</span><span>23, 23, 28</span></div>
+                <div class="code-row"><span>CMYK</span><span>70, 65, 55, 75</span></div>
+                <div class="code-row"><span>Pantone</span><span>Black 6 C</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Coral -->
+          <div class="swatch-card" onclick="copyColor('#ff7759')">
+            <div class="swatch-color" style="background: #ff7759;"></div>
+            <div class="swatch-info">
+              <h4>Signature Coral</h4>
+              <div class="role">Dynamic Energy Accent</div>
+              <div class="code-list">
+                <div class="code-row"><span>HEX</span><strong>#FF7759</strong></div>
+                <div class="code-row"><span>RGB</span><span>255, 119, 89</span></div>
+                <div class="code-row"><span>CMYK</span><span>0, 68, 65, 0</span></div>
+                <div class="code-row"><span>Pantone</span><span>Warm Red C</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Canvas White -->
+          <div class="swatch-card" onclick="copyColor('#ffffff')">
+            <div class="swatch-color" style="background: #ffffff;"></div>
+            <div class="swatch-info">
+              <h4>Canvas White</h4>
+              <div class="role">Editorial Space</div>
+              <div class="code-list">
+                <div class="code-row"><span>HEX</span><strong>#FFFFFF</strong></div>
+                <div class="code-row"><span>RGB</span><span>255, 255, 255</span></div>
+                <div class="code-row"><span>CMYK</span><span>0, 0, 0, 0</span></div>
+                <div class="code-row"><span>Paper</span><span>Bright White</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Stone -->
+          <div class="swatch-card" onclick="copyColor('#eeece7')">
+            <div class="swatch-color" style="background: #eeece7;"></div>
+            <div class="swatch-info">
+              <h4>Soft Stone</h4>
+              <div class="role">Neutral Backdrop</div>
+              <div class="code-list">
+                <div class="code-row"><span>HEX</span><strong>#EEECE7</strong></div>
+                <div class="code-row"><span>RGB</span><span>238, 236, 231</span></div>
+                <div class="code-row"><span>CMYK</span><span>5, 4, 7, 0</span></div>
+                <div class="code-row"><span>Pantone</span><span>Cool Gray 1 C</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deep Green -->
+          <div class="swatch-card" onclick="copyColor('#003c33')">
+            <div class="swatch-color" style="background: #003c33;"></div>
+            <div class="swatch-info">
+              <h4>Enterprise Green</h4>
+              <div class="role">Product Band Backdrop</div>
+              <div class="code-list">
+                <div class="code-row"><span>HEX</span><strong>#003C33</strong></div>
+                <div class="code-row"><span>RGB</span><span>0, 60, 51</span></div>
+                <div class="code-row"><span>CMYK</span><span>88, 42, 68, 52</span></div>
+                <div class="code-row"><span>Pantone</span><span>567 C</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dark Navy -->
+          <div class="swatch-card" onclick="copyColor('#071829')">
+            <div class="swatch-color" style="background: #071829;"></div>
+            <div class="swatch-info">
+              <h4>Financial Navy</h4>
+              <div class="role">High-Security Contrast</div>
+              <div class="code-list">
+                <div class="code-row"><span>HEX</span><strong>#071829</strong></div>
+                <div class="code-row"><span>RGB</span><span>7, 24, 41</span></div>
+                <div class="code-row"><span>CMYK</span><span>92, 75, 48, 68</span></div>
+                <div class="code-row"><span>Pantone</span><span>539 C</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Typography -->
+      <section class="book-section" id="typography">
+        <h2><span class="sec-num">05.</span> Typography System</h2>
+        <p class="lead">A precise typographic hierarchy pairing architectural grotesque display headlines with neutral body prose and technical monospace tags.</p>
+
+        <div class="type-specimen">
+          <div class="font-label">Display &amp; Headings · Space Grotesk (700 Bold / 500 Medium)</div>
+          <div class="specimen-text-large">CREATIVE REALM DESIGNS</div>
+          <div style="font-family: 'Space Grotesk'; font-size: 20px; color: #d0d0dc; margin-bottom: 12px;">
+            The Sovereign Digital Agency Command Center
+          </div>
+          <p style="font-size: 13px; color: var(--text-muted);">Tracking: -0.02em to -0.04em. Applied to hero headlines, navbar brand signature, and product cards.</p>
+        </div>
+
+        <div class="type-specimen">
+          <div class="font-label">Body &amp; Interface · Inter (400 Regular / 500 Medium)</div>
+          <p style="font-size: 16px; color: #eeece7; max-width: 720px; margin-bottom: 8px;">
+            We craft bespoke websites with editorial discipline and Next.js performance. Clean design converts visitors into loyal clients through clarity, speed, and strategic Google visibility.
+          </p>
+          <p style="font-size: 13px; color: var(--text-muted);">Tracking: 0. Line height: 1.5 to 1.6. Applied to body paragraphs, case studies, and form controls.</p>
+        </div>
+
+        <div class="type-specimen">
+          <div class="font-label">Technical Data &amp; Badges · Space Mono (400 Regular / 700 Bold)</div>
+          <div class="specimen-text-mono">01.bespoke-engineering // 99_core-web-vitals // $0_downtime</div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px;">Tracking: +0.02em. Applied to category badges, code snippets, timestamps, and architectural coordinates.</p>
+        </div>
+      </section>
+
+      <!-- 6. Web & App Icons -->
+      <section class="book-section" id="iconography">
+        <h2><span class="sec-num">06.</span> Web &amp; App Icon Suite</h2>
+        <p class="lead">All browser favicons, mobile homescreen icons, and progressive web app manifests are compiled and deployed in the root directory.</p>
+
+        <div class="grid-4">
+          <div class="card" style="text-align: center;">
+            <div style="height: 96px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+              <img src="/favicon.svg" alt="Browser Favicon" style="height: 48px; width: 48px;">
+            </div>
+            <h4>favicon.svg</h4>
+            <p>Scalable vector favicon for Chromium and Safari.</p>
+          </div>
+
+          <div class="card" style="text-align: center;">
+            <div style="height: 96px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+              <img src="/apple-touch-icon.png" alt="Apple Touch Icon" style="height: 64px; width: 64px; border-radius: 14px; box-shadow: 0 4px 12px rgba(0,0,0,0.4);">
+            </div>
+            <h4>apple-touch-icon.png</h4>
+            <p>180×180 iOS homescreen icon on charcoal tile.</p>
+          </div>
+
+          <div class="card" style="text-align: center;">
+            <div style="height: 96px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+              <img src="/icon-192.png" alt="Android PWA Icon" style="height: 64px; width: 64px; border-radius: 12px;">
+            </div>
+            <h4>icon-192.png</h4>
+            <p>Android PWA launch icon with 16px squircle radius.</p>
+          </div>
+
+          <div class="card" style="text-align: center;">
+            <div style="height: 96px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;">
+              <div style="font-family: 'Space Mono'; font-size: 24px; color: var(--coral); font-weight: bold;">.ICO</div>
+            </div>
+            <h4>favicon.ico</h4>
+            <p>Multi-resolution compiled binary (16, 32, 48 px).</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Applications -->
+      <section class="book-section" id="applications">
+        <h2><span class="sec-num">07.</span> Mockups &amp; In-Use Contexts</h2>
+        <p class="lead">Real-world applications demonstrating how the identity system performs across digital command centers and physical collateral.</p>
+
+        <div class="card" style="padding: 24px;">
+          <img src="/apple-touch-icon.png" style="display:none;" alt="preload">
+          <div style="border-radius: 12px; overflow: hidden; border: 1px solid var(--border-dark);">
+            <div style="background: #17171c; padding: 12px 20px; border-bottom: 1px solid var(--border-dark); display: flex; align-items: center; justify-content: space-between;">
+              <div style="display: flex; gap: 8px;">
+                <span style="height: 10px; width: 10px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
+                <span style="height: 10px; width: 10px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
+                <span style="height: 10px; width: 10px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
+              </div>
+              <span style="font-family: 'Space Mono'; font-size: 11px; color: var(--text-muted);">agency-command-center.sh</span>
+              <span></span>
+            </div>
+            <div style="background: #0d0d11; padding: 32px; font-family: 'Space Mono', monospace; font-size: 13px; color: #4ade80;">
+              <p style="color: #93939f;">$ creativerealm --audit</p>
+              <p>✔ Identity: Architectural Monolith (CR) Active</p>
+              <p>✔ Core Web Vitals: 100/100 LCP (0.4s) | 100/100 CLS (0.00)</p>
+              <p>✔ Framework: Next.js 16 (Turbopack) | Engine: Bespoke Vector</p>
+              <p style="color: var(--coral); margin-top: 8px;">→ Ready for ambitious brand deployments.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. Governance & Rules -->
+      <section class="book-section" id="governance">
+        <h2><span class="sec-num">08.</span> Brand Rules &amp; Misuse (Do's &amp; Don'ts)</h2>
+        <p class="lead">Strict guidelines to preserve visual integrity. Never alter the geometry or styling of the master files.</p>
+
+        <table class="brand-table">
+          <thead>
+            <tr>
+              <th style="width: 120px;">Classification</th>
+              <th>Rule Description</th>
+              <th>Reasoning</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="badge-do">DO</span></td>
+              <td>Always use official SVGs from <code>/public/brand/</code> or the <code>&lt;BrandLogo /&gt;</code> React component.</td>
+              <td>Guarantees crisp subpixel rendering, zero layout shift, and correct geometry.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-do">DO</span></td>
+              <td>Switch to the inverted white logo whenever placing on backgrounds darker than 40% luminance.</td>
+              <td>Ensures high-contrast accessibility compliance (WCAG AAA).</td>
+            </tr>
+            <tr>
+              <td><span class="badge-dont">DON'T</span></td>
+              <td>Never stretch, squash, or distort the aspect ratio of the symbol or wordmark.</td>
+              <td>Destroys the architectural proportions and 60-degree angle.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-dont">DON'T</span></td>
+              <td>Never add drop shadows, outer glows, bevels, or gradients directly to the vector mark.</td>
+              <td>Dilutes the sober, editorial command-center agency aesthetic.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-dont">DON'T</span></td>
+              <td>Never rotate the mark or change the relative scale between symbol and typography.</td>
+              <td>Weakens trademark memorability and brand recall.</td>
+            </tr>
+            <tr>
+              <td><span class="badge-dont">DON'T</span></td>
+              <td>Never recolor the logo with unapproved colors outside the brand palette.</td>
+              <td>Brand equity requires consistency of concept and palette discipline.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <div id="copy-toast">Copied to clipboard!</div>
+
+  <script>
+    function copyColor(hex) {
+      navigator.clipboard.writeText(hex).then(() => {
+        const toast = document.getElementById('copy-toast');
+        toast.textContent = 'Copied ' + hex + ' to clipboard!';
+        toast.style.display = 'block';
+        setTimeout(() => { toast.style.display = 'none'; }, 2000);
+      });
+    }
+
+    // ScrollSpy for Sidebar Links
+    const sections = document.querySelectorAll('section, header');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 120) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

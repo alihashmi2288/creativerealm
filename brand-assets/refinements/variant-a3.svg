@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title-a3">
-  <title id="title-a3">Creative Realm - Kinetic Architectural CR</title>
-  <g id="symbol" fill="#17171c">
-    <!-- Monolithic 'C' Frame and 'R' Bowl -->
-    <path fill-rule="evenodd" d="M 60 36 H 154 C 182.72 36 206 59.28 206 88 C 206 113.8 187.2 135.2 162.6 139.3 L 158 128 C 176 124 188 111.5 188 88 C 188 69.2 172.8 54 154 54 H 80 V 184 H 124 V 220 H 60 A 16 16 0 0 1 44 204 V 52 A 16 16 0 0 1 60 36 Z"/>
-    <!-- Kinetic Floating 'R' Leg (Forward Momentum) -->
-    <polygon points="166.97,142 212,220 166,220 120.97,142"/>
-  </g>
-</svg>
