@@ -12,6 +12,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import ProposalDialog from "@/components/ProposalDialog";
+import BrandLogo from "@/components/BrandLogo";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -41,10 +42,10 @@ export default function Navbar() {
         <Link 
           href="/" 
           prefetch={false}
-          className="text-base sm:text-lg font-bold tracking-tight text-[#17171c] uppercase font-display focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#17171c] rounded-full px-2 py-1 transition-opacity hover:opacity-80"
+          className="flex items-center gap-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#17171c] rounded-full px-1 py-1 transition-opacity hover:opacity-85"
           aria-label="Creative Realm Homepage"
         >
-          CREATIVE <span className="text-[#ff7759]">REALM</span>
+          <BrandLogo variant="default" size="md" />
         </Link>
         
         {/* Center Zone: Navigation Links */}
@@ -97,9 +98,12 @@ export default function Navbar() {
             <SheetContent side="right" className="bg-white border-l border-[#e5e7eb] text-[#212121] w-full sm:max-w-md p-8 flex flex-col justify-between">
               <div className="flex flex-col gap-8 pt-8">
                 <SheetHeader className="text-left">
-                  <SheetTitle className="text-xl font-bold font-display uppercase tracking-tight text-[#17171c]">
-                    CREATIVE <span className="text-[#ff7759]">REALM</span>
+                  <SheetTitle className="sr-only">
+                    Creative Realm Navigation
                   </SheetTitle>
+                  <Link href="/" onClick={() => setIsOpen(false)} className="inline-block py-1">
+                    <BrandLogo variant="default" size="md" />
+                  </Link>
                 </SheetHeader>
 
                 <nav aria-label="Mobile Navigation" className="flex flex-col gap-4 mt-2">

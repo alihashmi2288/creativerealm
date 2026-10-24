@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NewsletterForm from "@/components/NewsletterForm";
+import BrandLogo from "@/components/BrandLogo";
 
 const socialLinks = [
   { label: "Follow us on X (Twitter)", icon: "𝕏", href: "https://x.com/CreativeRealmUK" },
@@ -17,9 +18,14 @@ export default function Footer() {
             <div className="text-xs uppercase tracking-widest text-[#ff7759] font-mono font-medium mb-3">
               CREATIVE REALM DESIGNS
             </div>
-            <h3 className="text-white font-display text-2xl sm:text-3xl font-bold mb-4 uppercase tracking-tight">
-              CREATIVE <span className="text-[#ff7759]">REALM</span>
-            </h3>
+            <Link 
+              href="/" 
+              prefetch={false} 
+              className="inline-block mb-4 transition-opacity hover:opacity-85 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#ff7759] rounded-sm"
+              aria-label="Creative Realm Homepage"
+            >
+              <BrandLogo variant="inverted" size="lg" />
+            </Link>
             <p className="text-[#93939f] text-sm leading-relaxed mb-6 max-w-sm">
               We design, build, and optimize high-converting websites for ambitious brands. Bespoke UI/UX, fast Next.js engineering, and organic Google SEO.
             </p>

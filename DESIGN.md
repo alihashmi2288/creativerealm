@@ -1,11 +1,11 @@
 ---
 version: alpha
-name: Cohere-design-analysis
-description: Cohere's 2026 web system is a controlled enterprise AI interface built from stark white editorial space, deep green-black product bands, soft mineral surfaces, rounded media cards, and a distinctive type split between monospaced-feeling display headlines and precise Unica77 UI text.
+name: Creative-Realm-design-system
+description: Creative Realm is a digital agency website which sells website design, development, and SEO. It is built from stark white editorial space, deep green-black product bands, soft mineral surfaces, rounded media cards, and a distinctive type split between monospaced-feeling display headlines and precise UI text.
 
 colors:
   primary: "#17171c"
-  cohere-black: "#000000"
+  creative-realm-black: "#000000"
   ink: "#212121"
   deep-green: "#003c33"
   dark-navy: "#071829"
@@ -30,73 +30,73 @@ colors:
 
 typography:
   hero-display:
-    fontFamily: CohereText
+    fontFamily: CreativeRealmText
     fontSize: 96px
     fontWeight: 400
     lineHeight: 1
     letterSpacing: -1.92px
   product-display:
-    fontFamily: CohereText
+    fontFamily: CreativeRealmText
     fontSize: 72px
     fontWeight: 400
     lineHeight: 1
     letterSpacing: -1.44px
   section-display:
-    fontFamily: Unica77 Cohere Web
+    fontFamily: Unica77
     fontSize: 60px
     fontWeight: 400
     lineHeight: 1
     letterSpacing: -1.2px
   section-heading:
-    fontFamily: Unica77 Cohere Web
+    fontFamily: Unica77
     fontSize: 48px
     fontWeight: 400
     lineHeight: 1.2
     letterSpacing: -0.48px
   card-heading:
-    fontFamily: Unica77 Cohere Web
+    fontFamily: Unica77
     fontSize: 32px
     fontWeight: 400
     lineHeight: 1.2
     letterSpacing: -0.32px
   feature-heading:
-    fontFamily: Unica77 Cohere Web
+    fontFamily: Unica77
     fontSize: 24px
     fontWeight: 400
     lineHeight: 1.3
     letterSpacing: 0
   body-large:
-    fontFamily: Unica77 Cohere Web
+    fontFamily: Unica77
     fontSize: 18px
     fontWeight: 400
     lineHeight: 1.4
     letterSpacing: 0
   body:
-    fontFamily: Unica77 Cohere Web
+    fontFamily: Unica77
     fontSize: 16px
     fontWeight: 400
     lineHeight: 1.5
     letterSpacing: 0
   button:
-    fontFamily: Unica77 Cohere Web
+    fontFamily: Unica77
     fontSize: 14px
     fontWeight: 500
     lineHeight: 1.71
     letterSpacing: 0
   caption:
-    fontFamily: Unica77 Cohere Web
+    fontFamily: Unica77
     fontSize: 14px
     fontWeight: 400
     lineHeight: 1.4
     letterSpacing: 0
   mono-label:
-    fontFamily: CohereMono
+    fontFamily: CreativeRealmMono
     fontSize: 14px
     fontWeight: 400
     lineHeight: 1.4
     letterSpacing: 0.28px
   micro:
-    fontFamily: Unica77 Cohere Web
+    fontFamily: Unica77
     fontSize: 12px
     fontWeight: 400
     lineHeight: 1.4
@@ -141,7 +141,7 @@ components:
     rounded: "{rounded.xl}"
     padding: 6px 12px
   announcement-bar:
-    backgroundColor: "{colors.cohere-black}"
+    backgroundColor: "{colors.creative-realm-black}"
     textColor: "{colors.on-dark}"
     typography: "{typography.micro}"
     height: 36px
@@ -196,7 +196,7 @@ components:
 
 ## Overview
 
-Cohere's current web presence feels like a sober enterprise AI command center with editorial restraint. The home page opens on a huge typographic declaration over a white canvas, then uses photography, dark product mockups, trust logos, and generous empty space to make AI infrastructure feel controlled rather than speculative. Product pages invert the tone into deep green-black or dark navy bands, while blog and research pages move toward publishing-system clarity: large filters, thin rules, dense lists, and pale technical backgrounds.
+Creative Realm's web presence feels like a sober, high-end digital agency command center with editorial restraint. The home page opens on a huge typographic declaration over a white canvas, then uses photography, dark product mockups, trust logos, and generous empty space to present digital products, custom web design, and SEO capabilities with confidence. Product pages invert the tone into deep green-black or dark navy bands, while packages and service pages move toward publishing-system clarity: large filters, thin rules, dense lists, and pale technical backgrounds.
 
 What makes the system distinctive is the mix of austere black-and-white UI with bursts of tactile brand imagery. The site avoids decorative chrome in the normal interface; color arrives through photography, abstract 3D media, coral blog taxonomy chips, blue research links, and dark product environments. Cards are rounded but not cute. Type is large, tight, and almost monospaced in spirit, creating a research-lab cadence across marketing, product, and editorial surfaces.
 
@@ -213,7 +213,7 @@ What makes the system distinctive is the mix of austere black-and-white UI with 
 
 ### Brand & Accent
 
-- **Cohere Black** (`#000000`): Announcement bar, highest-contrast text, and the global brand anchor.
+- **Creative Realm Black** (`#000000`): Announcement bar, highest-contrast text, and the global brand anchor.
 - **Near-Black Primary** (`#17171c`): Primary CTA buttons, dark footer, and deep UI cards.
 - **Deep Enterprise Green** (`#003c33`): Product hero bands for North and Command-style dark sections.
 - **Dark Navy** (`#071829`): Financial-services and security-oriented solution bands.
@@ -245,23 +245,23 @@ What makes the system distinctive is the mix of austere black-and-white UI with 
 
 ### Gradient System
 
-Cohere does not use gradients as a generic UI fill. Gradients and color fields are media-led: abstract 3D hero imagery, deep blue open-science particle fields, red-orange product video posters, and dark green-to-black product environments. Keep UI surfaces flat; reserve gradient richness for large media panels and CTA image bands.
+Creative Realm does not use gradients as a generic UI fill. Gradients and color fields are media-led: abstract 3D hero imagery, deep blue particle fields, red-orange product video posters, and dark green-to-black product environments. Keep UI surfaces flat; reserve gradient richness for large media panels and CTA image bands.
 
 ## Typography
 
 ### Font Family
 
-- **Display**: `CohereText`, falling back to `Space Grotesk`, `Inter`, `ui-sans-serif`, and `system-ui`.
-- **Body/UI**: `Unica77 Cohere Web`, falling back to `Inter`, `Arial`, `ui-sans-serif`, and `system-ui`.
-- **Technical labels**: `CohereMono`, falling back to `Arial`, `ui-sans-serif`, and `system-ui`.
-- **Icons**: Cohere uses custom icon fonts and thin-line geometric illustrations.
+- **Display**: `CreativeRealmText`, falling back to `Space Grotesk`, `Inter`, `ui-sans-serif`, and `system-ui`.
+- **Body/UI**: `Unica77`, falling back to `Inter`, `Arial`, `ui-sans-serif`, and `system-ui`.
+- **Technical labels**: `CreativeRealmMono`, falling back to `Space Mono`, `Arial`, `ui-sans-serif`, and `system-ui`.
+- **Icons**: Creative Realm uses custom icon fonts and thin-line geometric illustrations.
 
 ### Hierarchy
 
 | Role | Font | Size | Weight | Line Height | Letter Spacing | Notes |
 |---|---|---:|---:|---:|---:|---|
-| Hero Display | CohereText | 96px | 400 | 1.00 | -1.92px | Home page declaration scale. |
-| Product Display | CohereText | 72px | 400 | 1.00 | -1.44px | Product and research hero headlines. |
+| Hero Display | CreativeRealmText | 96px | 400 | 1.00 | -1.92px | Home page declaration scale. |
+| Product Display | CreativeRealmText | 72px | 400 | 1.00 | -1.44px | Product and research hero headlines. |
 | Section Display | Unica77 | 60px | 400 | 1.00 | -1.2px | Large product-page headings. |
 | Section Heading | Unica77 | 48px | 400 | 1.20 | -0.48px | Split hero and CTA headings. |
 | Card Heading | Unica77 | 32px | 400 | 1.20 | -0.32px | Feature card and list section titles. |
@@ -270,12 +270,12 @@ Cohere does not use gradients as a generic UI fill. Gradients and color fields a
 | Body | Unica77 | 16px | 400 | 1.50 | 0 | Default copy and link text. |
 | Button | Unica77 | 14px | 500 | 1.71 | 0 | Compact CTA labels. |
 | Caption | Unica77 | 14px | 400 | 1.40 | 0 | Metadata and small explanatory text. |
-| Mono Label | CohereMono | 14px | 400 | 1.40 | 0.28px | Uppercase technical labels. |
+| Mono Label | CreativeRealmMono | 14px | 400 | 1.40 | 0.28px | Uppercase technical labels. |
 | Micro | Unica77 | 12px | 400 | 1.40 | 0 | Footer, nav microcopy, and small links. |
 
 ### Principles
 
-- Use massive type sparingly; Cohere pages often have one oversized headline and then settle into restrained 16px-24px UI copy.
+- Use massive type sparingly; Creative Realm pages often have one oversized headline and then settle into restrained 16px-24px UI copy.
 - Keep display type tight. Hero copy should feel compact and carved, not airy.
 - Avoid heavy bold weights. Size, spacing, and surface contrast do most of the hierarchy work.
 - Use uppercase mono labels for category and system markers, especially on product and research pages.
@@ -300,11 +300,11 @@ Large sections rely on dramatic vertical breathing room. The home page places a 
 
 ### Whitespace Philosophy
 
-Cohere uses whitespace as a trust signal. Large empty intervals separate the brand claim, customer proof, product proof, and CTA. Dense content appears only where it serves the information architecture: research paper rows, blog card grids, and contact form fields.
+Creative Realm uses whitespace as a trust signal. Large empty intervals separate the brand claim, customer proof, product proof, and CTA. Dense content appears only where it serves the information architecture: research paper rows, blog card grids, and contact form fields.
 
 ## Elevation & Depth
 
-Cohere is mostly flat. Depth comes from surface alternation, media contrast, rounded corners, and thin borders rather than drop shadows.
+Creative Realm is mostly flat. Depth comes from surface alternation, media contrast, rounded corners, and thin borders rather than drop shadows.
 
 | Level | Treatment | Use |
 |---|---|---|
@@ -405,7 +405,7 @@ Dark footer subscription block with coral "AI moves fast" label, white headline,
 
 - Do not turn coral or blue into broad decorative surface colors.
 - Do not add heavy drop shadows to cards.
-- Do not make every section card-based; Cohere often uses unframed rows, rules, and open space.
+- Do not make every section card-based; Creative Realm often uses unframed rows, rules, and open space.
 - Do not use rounded cards below 8px for major media.
 - Do not replace the display/body type split with one generic sans-serif voice.
 - Do not render undocumented interaction variants in documentation or previews.

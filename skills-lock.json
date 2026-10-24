@@ -43,6 +43,12 @@
       "skillPath": "skills/claymorphism/SKILL.md",
       "computedHash": "ec2fd923cd2e389006b2ac2798bd832a56f9f0f99c9bd729758b9f17e0bbbc5d"
     },
+    "logo-design": {
+      "source": "kaankiziltug/logo-design-skill",
+      "sourceType": "github",
+      "skillPath": "skills/logo-design/SKILL.md",
+      "computedHash": "b9f663e957348acab948c34632ec6dabdec63e91509675c5c84948e753acc720"
+    },
     "modern-web-guidance": {
       "source": "GoogleChrome/modern-web-guidance",
       "sourceType": "github",
